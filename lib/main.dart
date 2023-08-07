@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:santander_app/pages/home/home.dart';
+import 'package:santander_app/shared/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppSettings.screenWidth = MediaQuery.of(context).size.width;
+    AppSettings.screenWidth = MediaQuery.of(context).size.width;
     return MaterialApp(
       title: 'Santander DevWeek',
       theme: ThemeData(
