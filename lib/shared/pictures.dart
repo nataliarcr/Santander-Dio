@@ -4,5 +4,5 @@ class ImagesApp {
   static String aMais = 'lib/assets/imgs/image 6.svg';
   static String aMenos = 'lib/assets/imgs/image 5.svg';
   static String notificacao = 'lib/assets/imgs/Vector.svg';
-  static String pix = 'lib/assets/imgs/Group 485592.svg';
+  static String down = 'lib/assets/imgs/Group 485592.svg';
 }

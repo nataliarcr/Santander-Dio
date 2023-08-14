@@ -4,6 +4,7 @@ import 'package:santander_app/models/user_model/user_model.dart';
 import 'package:santander_app/services/api.dart';
 import 'package:santander_app/shared/colors.dart';
 import 'package:santander_app/shared/pictures.dart';
+import 'package:santander_app/widgets/card.dart';
 import 'package:santander_app/widgets/features.dart';
 import 'package:santander_app/widgets/header.dart';
 
@@ -55,6 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 HeaderWidget(user: user!),
                 FeaturesWidget(features: user!.features!),
+                const SizedBox(height: 10),
+                CardWidget(card: user!.card!),
               ],
             ),
           );
