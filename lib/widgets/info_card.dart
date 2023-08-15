@@ -5,7 +5,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:santander_app/models/user_model/news.dart';
 import 'package:santander_app/shared/colors.dart';
 import 'package:santander_app/shared/pictures.dart';
-import 'package:santander_app/shared/settings.dart';
 
 class InfoCardsWidget extends StatefulWidget {
   final List<News> news;
@@ -49,8 +48,9 @@ class _InfoCardsWidgetState extends State<InfoCardsWidget> {
   Widget getFeatureCard(String image, String description) {
     return Card(
         child: Container(
-      width: 333,
-      height: 115,
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      width: 325,
+      height: 66,
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
@@ -66,16 +66,19 @@ class _InfoCardsWidgetState extends State<InfoCardsWidget> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const SizedBox(
+            height: 36,
+          ),
           //parte de dentro do card
           SvgPicture.network(
             image,
             semanticsLabel: '',
             colorFilter: ColorFilter.mode(ColorsApp.red, BlendMode.srcIn),
-            width: 30,
-            height: 30,
+            width: 43,
+            height: 44,
           ),
           const SizedBox(
-            height: 16,
+            height: 36,
           ),
           Expanded(
               child: Text(
@@ -89,7 +92,7 @@ class _InfoCardsWidgetState extends State<InfoCardsWidget> {
             ),
           )),
           const SizedBox(
-            height: 16,
+            height: 36,
           ),
         ],
       ),
@@ -101,8 +104,8 @@ class _InfoCardsWidgetState extends State<InfoCardsWidget> {
     return Column(
       children: [
         SizedBox(
-          height: 130,
-          width: AppSettings.screenWidth,
+          height: 115,
+          width: 375,
           child: PageView(
             onPageChanged: (index) {
               setState(() {

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:santander_app/models/user_model/card.dart';
@@ -18,7 +17,7 @@ class _CardWidgetState extends State<CardWidget> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-      width: 350,
+      width: 370,
       height: 66,
       decoration: ShapeDecoration(
         color: ColorsApp.red,
