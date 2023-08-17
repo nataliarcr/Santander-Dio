@@ -6,4 +6,6 @@ class ImagesApp {
   static String notificacao = 'lib/assets/imgs/Vector.svg';
   static String down = 'lib/assets/imgs/Group 485592.svg';
   static String circulo = 'lib/assets/imgs/Group 485596.svg';
+  static String up = 'lib/assets/imgs/Group 485589.svg';
+  static String fresh = 'lib/assets/imgs/FONT__FRESHMAN.svg';
 }

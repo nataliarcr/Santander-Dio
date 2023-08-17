@@ -22,12 +22,6 @@ class _InfoCardsWidgetState extends State<InfoCardsWidget> {
   int cardPosition = 0;
   var icons = <Widget>[];
 
-  // @override
-  // void dispose() {
-  //   pageController.dispose();
-  //   super.dispose();
-  // }
-
   @override
   void initState() {
     super.initState();
