@@ -29,7 +29,7 @@ class BalanceWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               //componentes um do lado do outro
@@ -40,7 +40,7 @@ class BalanceWidget extends StatelessWidget {
                   width: 30,
                   height: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 const Text(
@@ -53,13 +53,16 @@ class BalanceWidget extends StatelessWidget {
                     letterSpacing: 0.18,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 SvgPicture.asset(
                   ImagesApp.up,
-                  width: 20,
-                  height: 20,
+                  width: 18,
+                  height: 18,
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 15,
             ),
             const Text(
               'R\$ 0000,00',
@@ -81,25 +84,36 @@ class BalanceWidget extends StatelessWidget {
                 letterSpacing: 0.18,
               ),
             ),
-            Container(
-              width: 283,
-              height: 2,
-              decoration: ShapeDecoration(
-                color: Color(0xFFD9D9D9),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(75),
-                ),
-              ),
+            const SizedBox(
+              height: 30,
             ),
-            const Text(
-              'Ver extrato',
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 18,
-                fontFamily: 'Open Sans',
-                fontWeight: FontWeight.w600,
-                letterSpacing: 0.18,
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 290,
+                  height: 2,
+                  decoration: ShapeDecoration(
+                    color: const Color(0xFFD9D9D9),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(75),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  'Ver extrato',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 18,
+                    fontFamily: 'Open Sans',
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.18,
+                  ),
+                ),
+              ],
             )
           ],
         ),
