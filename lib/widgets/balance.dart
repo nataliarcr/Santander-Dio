@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intl/intl.dart';
 import 'package:santander_app/models/user_model/account.dart';
 import 'package:santander_app/shared/colors.dart';
 
@@ -64,9 +65,9 @@ class BalanceWidget extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const Text(
-              'R\$ 0000,00',
-              style: TextStyle(
+            Text(
+              'R\$ ${NumberFormat('#,##0.00', 'pt_BR').format(account.balance!)}',
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 33,
                 fontFamily: 'Open Sans',
@@ -74,9 +75,9 @@ class BalanceWidget extends StatelessWidget {
                 letterSpacing: 0.32,
               ),
             ),
-            const Text(
-              'Saldo + Limite: R\$ 0000,00',
-              style: TextStyle(
+            Text(
+              'Saldo + Limite: R\$ ${NumberFormat('#,##0.00', 'pt_BR').format((account.limit ?? 0) + (account.balance ?? 0))}',
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 18,
                 fontFamily: 'Open Sans',

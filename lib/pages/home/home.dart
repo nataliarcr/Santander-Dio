@@ -53,19 +53,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: SvgPicture.asset(ImagesApp.notificacao, height: 24))
               ],
             ),
-            body: Column(
-              //
-              children: [
-                HeaderWidget(user: user!),
-                const SizedBox(height: 10),
-                BalanceWidget(account: user!.account!),
-                FeaturesWidget(features: user!.features!),
-                const SizedBox(height: 10),
-                CardWidget(card: user!.card!),
-                const SizedBox(height: 10),
-                InfoCardsWidget(news: user!.news!),
-              ],
-            ),
+            body: Stack(
+
+                //
+                children: [
+                  Column(
+                    children: [
+                      HeaderWidget(user: user!),
+                      const SizedBox(height: 200),
+                      FeaturesWidget(features: user!.features!),
+                      const SizedBox(height: 10),
+                      CardWidget(card: user!.card!),
+                      const SizedBox(height: 10),
+                      InfoCardsWidget(news: user!.news!),
+                    ],
+                  ),
+                  Positioned(
+                    top: 100,
+                    left: 10,
+                    child: BalanceWidget(account: user!.account!),
+                  ),
+                ]),
           );
   }
 }
